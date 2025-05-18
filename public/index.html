@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart ID Card Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Smart ID Card Attendance</h1>
 
+  <section>
+    <h2>Add Student</h2>
+    <form id="add-student-form">
+      <input type="text" id="student-name" placeholder="Name" required />
+      <input type="text" id="student-roll" placeholder="Roll Number" required />
+      <input type="text" id="student-rfid" placeholder="RFID" required />
+      <button type="submit">Add Student</button>
+    </form>
+    <div id="add-student-msg"></div>
+  </section>
+
+  <section>
+    <h2>Mark Attendance</h2>
+    <form id="mark-attendance-form">
+      <input type="text" id="attendance-rfid" placeholder="RFID" required />
+      <button type="submit">Mark Present</button>
+    </form>
+    <div id="mark-attendance-msg"></div>
+  </section>
+
+  <section>
+    <h2>View Attendance</h2>
+    <input type="date" id="attendance-date" />
+    <button id="view-attendance-btn">View</button>
+    <table id="attendance-table">
+      <thead>
+        <tr><th>Name</th><th>Roll Number</th><th>Present</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html> 
